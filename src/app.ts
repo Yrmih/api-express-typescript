@@ -1,10 +1,14 @@
 import express from 'express';
 import config from 'config';
+import router from './router';
 
 const app = express();
 
 // JSON middleware
 app.use(express.json());
+
+// routes
+app.use('/api/', router);
 
 // app port from config
 const port = config.get<number>('port'); // pegando a porta do config
