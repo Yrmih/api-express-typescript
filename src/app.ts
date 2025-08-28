@@ -5,3 +5,7 @@ const app = express();
 
 // JSON middleware
 app.use(express.json());
+
+app.listen(3000, async () => {
+  console.log('Aplicação está rodando na porta 3000');
+});
