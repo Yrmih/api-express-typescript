@@ -1,7 +1,7 @@
 
 export default {
   port: 3000,
-  dbUser: process.env.DB_USER,
+  dbUser: process.env.DB_USER,// adicionando variaveis de ambiente no default.ts porque é um arquivo publico
   dbPass: process.env.DB_PASS,
   dbUri: `mongodb+srv://:@cluster0.6skx25o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
 }
