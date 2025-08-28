@@ -1,4 +1,3 @@
-import db from "./db";
 
 export default {
   port: 3000,

@@ -7,6 +7,9 @@ const app = express();
 // JSON middleware
 app.use(express.json());
 
+//DB
+
+import db from '../config/db';
 // routes
 app.use('/api/', router);
 
