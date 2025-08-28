@@ -7,5 +7,5 @@ const app = express();
 app.use(express.json());
 
 app.listen(3000, async () => {
-  console.log('Aplicação está rodando na porta 3000');
+  console.log('Aplicação está rodando na porta 3000'); // adicionando o app listen que serve para rodar a aplicação
 });
