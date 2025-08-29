@@ -5,7 +5,7 @@ const  dbPass = process.env.DB_PASS;
 
 export default {
   port: 3000,
-  dbUri: `mongodb+srv://${dbUser}:${dbPass}@cluster0.6skx25o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
+  dbUri: `mongodb+srv://${dbUser}:${dbPass}@cluster0.6skx25o.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`,
   env:'development',
 }
 
