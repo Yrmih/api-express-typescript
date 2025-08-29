@@ -10,7 +10,8 @@ async function connect() {
     Logger.info("Conectado ao MongoDB");
   } catch (error) {
     Logger.info("Erro ao conectar ao MongoDB");
-    Logger.info(`${error}`);
+    Logger.info(`Erro: ${error}`);
+    process.exit(1);
   }
 }
 
