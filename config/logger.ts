@@ -11,4 +11,7 @@ const levels = {
 
 const level = () => {
   const env = config.get<string>('env') || 'development';
+
+  const isDevelopment = env === 'development';
+  return isDevelopment ? 'debug' : 'warn';
 }
