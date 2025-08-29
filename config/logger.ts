@@ -1,8 +1,6 @@
 import winston from "winston";
 import  config from "config";
-import { info } from "console";
-import e from "express";
-
+// criando o logger para a aplicação
 const levels = {
   error: 0,
   warn: 1,
@@ -48,5 +46,6 @@ const logger = winston.createLogger({
   format,
   transports
 });
+// const logger é uma instância do winston que pode ser usada na aplicação
 
 export default logger;

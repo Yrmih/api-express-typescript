@@ -11,6 +11,9 @@ const app = express();
 // JSON middleware
 app.use(express.json());
 
+// logger
+import logger from '../config/logger';
+
 //DB
 
 import db from '../config/db';
@@ -22,6 +25,8 @@ const port = config.get<number>('port'); // pegando a porta do config
 
 
 // o listen que serve para rodar a aplicação
+
+
 app.listen(port, async () => {
   console.log(`Aplicação está rodando na porta: ${port}`);
-}); // adicionando o port do config no listen para não deixar hardcoded a porta no app.ts
+});
