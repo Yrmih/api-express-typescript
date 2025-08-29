@@ -12,11 +12,12 @@ const app = express();
 app.use(express.json());
 
 // logger
-import logger from '../config/logger';
+import Logger from '../config/logger';
 
 //DB
 
 import db from '../config/db';
+
 // routes
 app.use('/api/', router);
 
@@ -28,5 +29,5 @@ const port = config.get<number>('port'); // pegando a porta do config
 
 
 app.listen(port, async () => {
-  console.log(`Aplicação está rodando na porta: ${port}`);
+  Logger.info(`Aplicação está rodando na porta: ${port}`);
 });

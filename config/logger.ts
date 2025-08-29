@@ -40,7 +40,7 @@ const transports = [
   new winston.transports.File({ filename: 'logs/all.log' }),
 ]
 
-const logger = winston.createLogger({
+const Logger = winston.createLogger({
   level: level(),
   levels,
   format,
@@ -48,4 +48,4 @@ const logger = winston.createLogger({
 });
 // const logger é uma instância do winston que pode ser usada na aplicação
 
-export default logger;
+export default Logger;
