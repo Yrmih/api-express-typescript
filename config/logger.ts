@@ -1,5 +1,6 @@
 import winston from "winston";
 import  config from "config";
+import { info } from "console";
 
 const levels = {
   error: 0,
@@ -22,4 +23,14 @@ const colors = {
   info: 'green',
   http: 'magenta',
   debug: 'white',
-} // colocar cores para cada level assim fica mais facil de identificar no console
+} 
+
+winston.addColors(colors);
+
+const format = winston.format.combine(
+  winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss:ms' }),
+  winston.format.colorize({ all: true }),
+  winston.format.printf(
+    (info) => `${info.timestamp} ${info.level}: ${info.message}`
+  )
+);
