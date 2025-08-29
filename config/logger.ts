@@ -1,6 +1,7 @@
 import winston from "winston";
 import  config from "config";
 import { info } from "console";
+import e from "express";
 
 const levels = {
   error: 0,
@@ -47,3 +48,5 @@ const logger = winston.createLogger({
   format,
   transports
 });
+
+export default logger;
