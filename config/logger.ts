@@ -22,4 +22,4 @@ const colors = {
   info: 'green',
   http: 'magenta',
   debug: 'white',
-}
+} // colocar cores para cada level assim fica mais facil de identificar no console
