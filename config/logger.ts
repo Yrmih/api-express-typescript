@@ -1,3 +1,14 @@
 import winston from "winston";
-import  Config from "config";
-// criando o logger para registrar logs da aplicação e tirar os console.logs porque não é uma boa prática
+import  config from "config";
+
+const levels = {
+  error: 0,
+  warn: 1,
+  info: 2,
+  http: 3,
+  debug: 4, 
+}
+
+const level = () => {
+  const env = config.get<string>('env') || 'development';
+}
