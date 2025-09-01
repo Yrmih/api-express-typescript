@@ -14,12 +14,18 @@ app.use(express.json());
 // logger
 import Logger from '../config/logger';
 
+// Middlewares
+
+import morganMiddleware from './middleware/morganMiddleware';
+
 //DB
 
 import db from '../config/db';
 
 // routes
 app.use('/api/', router);
+
+app.use(morganMiddleware);
 
 // app port from config
 const port = config.get<number>('port'); // pegando a porta do config
