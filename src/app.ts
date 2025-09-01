@@ -22,10 +22,10 @@ import morganMiddleware from './middleware/morganMiddleware';
 
 import db from '../config/db';
 
+app.use(morganMiddleware);
+
 // routes
 app.use('/api/', router);
-
-app.use(morganMiddleware);
 
 // app port from config
 const port = config.get<number>('port'); // pegando a porta do config
