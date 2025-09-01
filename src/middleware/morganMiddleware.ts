@@ -4,4 +4,9 @@ import Logger from "../../config/logger";
 
 const stream: StreamOptions = {
   write: (message) => Logger.http(message),
+};
+
+const skip = () => {
+  const env = config.get<string>("env") || "development";
+  return env !== "development";
 }
