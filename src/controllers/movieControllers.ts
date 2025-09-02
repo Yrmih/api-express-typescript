@@ -9,5 +9,11 @@ import { MovieModel } from '../models/Movie';
 import Logger from '../../config/logger';
 
 export async function createMovie(req: Request, res: Response) {
- return res.status(200).send('O controlador de filmes está funcionando!');  
+  try {
+    const data = req.body;
+    const movie = await MovieModel.create(data);
+    return res.status(201).json(movie);
+  } catch (e: any) {
+    Logger.error(`erro no sistema: ${e.message}`);
+  }
 }
