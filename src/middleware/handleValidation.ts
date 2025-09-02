@@ -5,11 +5,12 @@ export const validate = (req: Request, res: Response, next: NextFunction) => {
   const errors = validationResult(req);
 
   if (errors.isEmpty()) {
+
     return next();
+    
   }
 
-  
-  const extratedErrors: { [key: string]: string }[] = [];
+  const extratedErrors = errors.array() as ValidationError[];
 
   errors
     .array()
