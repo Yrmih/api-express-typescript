@@ -10,7 +10,7 @@ export const validate = (req: Request, res: Response, next: NextFunction) => {
   const extractedErrors: object[] = [];
 
   // Força a tipagem para ValidationError
-  errors.array().map((err) => extractedErrors.push({ [err.param]: err.msg }));
+  errors.array().map((err) => extractedErrors.push({ message: err.msg }));
 
   return res.status(422).json({
     errors: extractedErrors,
