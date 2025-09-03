@@ -1,0 +1,5 @@
+2025-09-02 02:13:44:1344 [31merror[39m: [31merro no sistema: Operation `movies.insertOne()` buffering timed out after 10000ms[39m
+2025-09-02 02:14:35:1435 [31merror[39m: [31merro no sistema: Operation `movies.insertOne()` buffering timed out after 10000ms[39m
+2025-09-03 11:52:45:5245 [31merror[39m: [31merro no sistema: Operation `movies.insertOne()` buffering timed out after 10000ms[39m
+2025-09-03 11:53:23:5323 [31merror[39m: [31merro no sistema: Operation `movies.insertOne()` buffering timed out after 10000ms[39m
+2025-09-03 13:06:48:648 [31merror[39m: [31merro no sistema: Operation `movies.insertOne()` buffering timed out after 10000ms[39m

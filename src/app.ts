@@ -34,6 +34,12 @@ const port = config.get<number>('port'); // pegando a porta do config
 // o listen que serve para rodar a aplicação
 
 
-app.listen(port, async () => {
-  Logger.info(`Aplicação está rodando na porta: ${port}`);
+db().then(() => {
+  app.listen(port, () => {
+    Logger.info(`Aplição rodando na porta ${port}`);
+  });
+}).catch((e) => {
+  Logger.error(`Erro ao conectar com o banco de dados: ${e.message}`);
 });
+
+export default app;

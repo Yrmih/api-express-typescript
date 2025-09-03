@@ -11,3 +11,24 @@
 [35m[39m
 2025-09-01 23:53:38:5338 [35mhttp[39m: [35mPOST /api/movie 200 42 - 2.789 ms[39m
 [35m[39m
+2025-09-02 02:13:01:131 [32minfo[39m: [32mAplicação está rodando na porta: 3000[39m
+2025-09-02 02:13:44:1344 [31merror[39m: [31merro no sistema: Operation `movies.insertOne()` buffering timed out after 10000ms[39m
+2025-09-02 02:14:24:1424 [35mhttp[39m: [35mPOST /api/movie - - - - ms[39m
+[35m[39m
+2025-09-02 02:14:27:1427 [35mhttp[39m: [35mPOST /api/movie - - - - ms[39m
+[35m[39m
+2025-09-02 02:14:35:1435 [31merror[39m: [31merro no sistema: Operation `movies.insertOne()` buffering timed out after 10000ms[39m
+2025-09-02 02:15:57:1557 [32minfo[39m: [32mAplicação está rodando na porta: 3000[39m
+2025-09-03 11:52:04:524 [32minfo[39m: [32mAplicação está rodando na porta: 3000[39m
+2025-09-03 11:52:45:5245 [31merror[39m: [31merro no sistema: Operation `movies.insertOne()` buffering timed out after 10000ms[39m
+2025-09-03 11:53:00:530 [35mhttp[39m: [35mPOST /api/movie - - - - ms[39m
+[35m[39m
+2025-09-03 11:53:01:531 [35mhttp[39m: [35mPOST /api/movies 404 150 - 1.445 ms[39m
+[35m[39m
+2025-09-03 11:53:23:5323 [31merror[39m: [31merro no sistema: Operation `movies.insertOne()` buffering timed out after 10000ms[39m
+2025-09-03 13:06:14:614 [32minfo[39m: [32mAplicação está rodando na porta: 3000[39m
+2025-09-03 13:06:48:648 [31merror[39m: [31merro no sistema: Operation `movies.insertOne()` buffering timed out after 10000ms[39m
+2025-09-03 13:19:18:1918 [32minfo[39m: [32mConectado ao MongoDB[39m
+2025-09-03 13:19:18:1918 [32minfo[39m: [32mAplição rodando na porta 3000[39m
+2025-09-03 13:20:58:2058 [35mhttp[39m: [35mPOST /api/movie 201 151 - 118.328 ms[39m
+[35m[39m
