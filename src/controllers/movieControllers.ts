@@ -34,3 +34,12 @@ export async function findMovieById(req: Request, res: Response) {
     Logger.error(`erro no sistema: ${e.message}`);
   }
 }
+
+export async function getAllMovies(req: Request, res: Response) {
+  try {
+    const
+  } catch (e: any) {
+     Logger.error(`erro no sistema: ${e.message}`);
+  }
+
+}
