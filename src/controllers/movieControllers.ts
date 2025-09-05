@@ -15,6 +15,7 @@ export async function createMovie(req: Request, res: Response) {
     return res.status(201).json(movie);
   } catch (e: any) {
     Logger.error(`erro no sistema: ${e.message}`);
+    return res.status(500).json({ message: 'Erro ao criar o filme' });
   }
 }
 
@@ -43,4 +44,8 @@ export async function getAllMovies(req: Request, res: Response) {
      Logger.error(`erro no sistema: ${e.message}`);
   }
 
+}
+
+export async function removeMovie(req: Request, res: Response) {
+  
 }

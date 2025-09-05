@@ -124,3 +124,27 @@
 2025-09-05 13:50:45:5045 [32minfo[39m: [32mAplição rodando na porta 3000[39m
 2025-09-05 13:50:49:5049 [32minfo[39m: [32mConectado ao MongoDB[39m
 2025-09-05 13:50:49:5049 [32minfo[39m: [32mAplição rodando na porta 3000[39m
+2025-09-05 13:55:24:5524 [32minfo[39m: [32mConectado ao MongoDB[39m
+2025-09-05 13:55:24:5524 [32minfo[39m: [32mAplição rodando na porta 3000[39m
+2025-09-05 13:55:27:5527 [35mhttp[39m: [35mGET /api//movie 404 149 - 3.215 ms[39m
+[35m[39m
+2025-09-05 13:56:05:565 [32minfo[39m: [32mConectado ao MongoDB[39m
+2025-09-05 13:56:05:565 [32minfo[39m: [32mAplição rodando na porta 3000[39m
+2025-09-05 13:56:10:5610 [35mhttp[39m: [35mGET /api//movie 404 149 - 6.229 ms[39m
+[35m[39m
+2025-09-05 14:25:52:2552 [35mhttp[39m: [35mGET /api/movie 200 1167 - 98.946 ms[39m
+[35m[39m
+2025-09-05 14:34:14:3414 [32minfo[39m: [32mConectado ao MongoDB[39m
+2025-09-05 14:34:14:3414 [32minfo[39m: [32mAplição rodando na porta 3000[39m
+2025-09-05 14:34:16:3416 [32minfo[39m: [32mConectado ao MongoDB[39m
+2025-09-05 14:34:16:3416 [32minfo[39m: [32mAplição rodando na porta 3000[39m
+2025-09-05 14:34:19:3419 [32minfo[39m: [32mConectado ao MongoDB[39m
+2025-09-05 14:34:19:3419 [32minfo[39m: [32mAplição rodando na porta 3000[39m
+2025-09-05 14:34:24:3424 [32minfo[39m: [32mConectado ao MongoDB[39m
+2025-09-05 14:34:24:3424 [32minfo[39m: [32mAplição rodando na porta 3000[39m
+2025-09-05 14:34:32:3432 [32minfo[39m: [32mConectado ao MongoDB[39m
+2025-09-05 14:34:32:3432 [32minfo[39m: [32mAplição rodando na porta 3000[39m
+2025-09-05 14:40:11:4011 [32minfo[39m: [32mConectado ao MongoDB[39m
+2025-09-05 14:40:11:4011 [32minfo[39m: [32mAplição rodando na porta 3000[39m
+2025-09-05 14:40:17:4017 [32minfo[39m: [32mConectado ao MongoDB[39m
+2025-09-05 14:40:17:4017 [32minfo[39m: [32mAplição rodando na porta 3000[39m
