@@ -7,7 +7,13 @@ export const movieCreateValidation = () => {
       .withMessage("O título é obrigatório.")
       .isLength({ min: 5 })
       .withMessage("O título deve ter no mínimo 5 caracteres."),
-    body("rating").isNumeric().withMessage("O rating deve ser um número."),
+    body("rating").isNumeric().withMessage("O rating deve ser um número.")
+      .custom((value: number) => {
+        if (value < 0 || value > 10) {
+          throw new Error("O rating deve estar entre 0 e 10.");
+        }
+        return true;
+      }),
   ];
 };
 
