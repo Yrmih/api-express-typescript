@@ -37,7 +37,8 @@ export async function findMovieById(req: Request, res: Response) {
 
 export async function getAllMovies(req: Request, res: Response) {
   try {
-    const
+    const movies = await MovieModel.find();
+    return res.status(200).json(movies);
   } catch (e: any) {
      Logger.error(`erro no sistema: ${e.message}`);
   }
