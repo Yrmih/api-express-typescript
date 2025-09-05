@@ -28,6 +28,8 @@ export async function findMovieById(req: Request, res: Response) {
       return res.status(404).json({ message: 'Filme não encontrado' });
     }
 
+    return res.status(200).json(movie);
+
   } catch (e: any) {
     Logger.error(`erro no sistema: ${e.message}`);
   }
