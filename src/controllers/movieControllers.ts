@@ -17,3 +17,18 @@ export async function createMovie(req: Request, res: Response) {
     Logger.error(`erro no sistema: ${e.message}`);
   }
 }
+
+export async function findMovieById(req: Request, res: Response) {
+  try {
+
+    const id = req.params.id;
+    const movie = await MovieModel.findById(id);
+
+    if (!movie) {
+      return res.status(404).json({ message: 'Filme não encontrado' });
+    }
+
+  } catch (e: any) {
+    Logger.error(`erro no sistema: ${e.message}`);
+  }
+}
