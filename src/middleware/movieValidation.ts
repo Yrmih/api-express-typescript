@@ -15,6 +15,7 @@ export const movieCreateValidation = () => {
         return true;
       }),
       body("description").isString().withMessage("A descrição é obrigatória."),
+      body('director').isString().withMessage('O diretor é obrigatório.'),
   ];
 };
 
