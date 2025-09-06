@@ -51,7 +51,7 @@ export async function removeMovie(req: Request, res: Response) {
     if (!movie) {
       return res
         .status(404)
-        .json({ message: "Filme não encontrado no banco de dados" });
+        .json({ message: "Filme não encontrado." });
     }
 
     await movie.deleteOne();
@@ -72,7 +72,7 @@ export async function updateMovie(req: Request, res: Response) {
     if (!movie) {
       return res
         .status(404)
-        .json({ message: "Filme não encontrado no banco de dados" });
+        .json({ message: "O filme não existe." }); // alterando a mensagem de erro para ficar mais legivel ao usuario em updaeMovie
     }
   } catch (e: any) {
     Logger.error(`erro no sistema: ${e.message}`);
