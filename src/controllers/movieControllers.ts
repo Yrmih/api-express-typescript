@@ -1,12 +1,12 @@
-import {Request, Response} from 'express';
+import { Request, Response } from "express";
 
 // Model
 
-import { MovieModel } from '../models/Movie';
+import { MovieModel } from "../models/Movie";
 
 // Logger
 
-import Logger from '../../config/logger';
+import Logger from "../../config/logger";
 
 export async function createMovie(req: Request, res: Response) {
   try {
@@ -15,22 +15,20 @@ export async function createMovie(req: Request, res: Response) {
     return res.status(201).json(movie);
   } catch (e: any) {
     Logger.error(`erro no sistema: ${e.message}`);
-    return res.status(500).json({ message: 'Erro ao criar o filme' });
+    return res.status(500).json({ message: "Erro ao criar o filme" });
   }
 }
 
 export async function findMovieById(req: Request, res: Response) {
   try {
-
     const id = req.params.id;
     const movie = await MovieModel.findById(id);
 
     if (!movie) {
-      return res.status(404).json({ message: 'Filme não encontrado' });
+      return res.status(404).json({ message: "Filme não encontrado" });
     }
 
     return res.status(200).json(movie);
-
   } catch (e: any) {
     Logger.error(`erro no sistema: ${e.message}`);
   }
@@ -41,27 +39,42 @@ export async function getAllMovies(req: Request, res: Response) {
     const movies = await MovieModel.find();
     return res.status(200).json(movies);
   } catch (e: any) {
-     Logger.error(`erro no sistema: ${e.message}`);
+    Logger.error(`erro no sistema: ${e.message}`);
   }
-
 }
 
 export async function removeMovie(req: Request, res: Response) {
   try {
-
     const id = req.params.id;
     const movie = await MovieModel.findById(id);
 
     if (!movie) {
-      return res.status(404).json({ message: 'Filme não encontrado no banco de dados' });
+      return res
+        .status(404)
+        .json({ message: "Filme não encontrado no banco de dados" });
     }
 
     await movie.deleteOne();
 
-    return res.status(200).json({ message: 'Filme removido com sucesso!' });
-
+    return res.status(200).json({ message: "Filme removido com sucesso!" });
   } catch (e: any) {
-    Logger.error(`Erro no sistema: ${e.message}`)
-    return res.status(500).json({ message: 'Por favor, tente mais tarde!' });
+    Logger.error(`Erro no sistema: ${e.message}`);
+    return res.status(500).json({ message: "Por favor, tente mais tarde!" });
+  }
+}
+
+export async function updateMovie(req: Request, res: Response) {
+  try {
+    const id = req.params.id;
+    const data = req.body;
+    const movie = await MovieModel.findById(id);
+
+    if (!movie) {
+      return res
+        .status(404)
+        .json({ message: "Filme não encontrado no banco de dados" });
+    }
+  } catch (e: any) {
+    Logger.error(`erro no sistema: ${e.message}`);
   }
 }
